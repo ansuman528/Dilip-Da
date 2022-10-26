@@ -1,7 +1,7 @@
 function wbc()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("wbcin").value; //this variable get the value of input
+    const value = document.getElementById("wbcout");// this variable get the value of output
     
     if(x < 52)
     {
@@ -36,8 +36,8 @@ function rbc()
 }
 function Haemoglobin()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Haemoglobiin").value; //this variable get the value of input
+    const value = document.getElementById("Haemoglobiout");// this variable get the value of output
     
     if(x < 12)
     {
@@ -54,8 +54,8 @@ function Haemoglobin()
 }
 function HCT()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("HCTin").value; //this variable get the value of input
+    const value = document.getElementById("HCTout");// this variable get the value of output
     
     if(x < 36)
     {
@@ -72,8 +72,8 @@ function HCT()
 }
 function MCV()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("MCVin").value; //this variable get the value of input
+    const value = document.getElementById("MCVout");// this variable get the value of output
     
     if(x < 83)
     {
@@ -90,8 +90,8 @@ function MCV()
 }
 function MCH()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("MCHin").value; //this variable get the value of input
+    const value = document.getElementById("MCHout");// this variable get the value of output
     
     if(x < 27)
     {
@@ -108,8 +108,8 @@ function MCH()
 }
 function MCHC()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("MCHCin").value; //this variable get the value of input
+    const value = document.getElementById("MCHCout");// this variable get the value of output
     
     if(x < 32)
     {
@@ -126,8 +126,8 @@ function MCHC()
 }
 function RDW()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("RDWin").value; //this variable get the value of input
+    const value = document.getElementById("RDWout");// this variable get the value of output
     
     if(x < 12)
     {
@@ -142,10 +142,10 @@ function RDW()
         value.innerHTML = "RDW is perfect";
     }
 }
-function Platelet_Count()
+function Platelet()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Plateletin").value; //this variable get the value of input
+    const value = document.getElementById("Plateletout");// this variable get the value of output
     
     if(x < 2)
     {
@@ -162,8 +162,8 @@ function Platelet_Count()
 }
 function Neutrophil()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Neutrophilin").value; //this variable get the value of input
+    const value = document.getElementById(" Neutrophilout");// this variable get the value of output
     
     if(x < 40)
     {
@@ -180,8 +180,8 @@ function Neutrophil()
 }
 function Eosinophil()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Eosinophilin").value; //this variable get the value of input
+    const value = document.getElementById("Eosinophilout");// this variable get the value of output
     
     if(x < 1)
     {
@@ -198,8 +198,8 @@ function Eosinophil()
 }
 function Basophil()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Basophiin").value; //this variable get the value of input
+    const value = document.getElementById("Basophiout");// this variable get the value of output
     
     if(x < 1)
     {
@@ -216,8 +216,8 @@ function Basophil()
 }
 function Lymphocyte()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Lymphocytein").value; //this variable get the value of input
+    const value = document.getElementById("Lymphocyteout");// this variable get the value of output
     
     if(x < 20)
     {
@@ -234,8 +234,8 @@ function Lymphocyte()
 }
 function Monocyte()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("Monocytein").value; //this variable get the value of input
+    const value = document.getElementById("Monocyteout");// this variable get the value of output
     
     if(x < 2)
     {
