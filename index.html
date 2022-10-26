@@ -6,20 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CBC Application</title>
     <link rel="stylesheet" href="/style.css" type="text/css">
-    <script src="index.js"></script>
-    <script>
-        
-    </script>
+    
 </head>
-<body>
-    <div class="container">
-        <h3>CBC Application</h3>
-        <h2>Enter your wbc rate</h2>
-        <input type="number" name="wbc" id="wbc">
-        <a href="https://www.youtube.com">click me</a>
-        <button onclick="wbc()">click me</button>
-        <h3 id="output"></h3>
+<body>  
+    <!-- 1st parameter -->
+    <div> 
+        <button id="myBtn">Check RBC count</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Enter your RBC count Value</h2>
+                <input type="number" name="RBC" id="rbcin">
+                <button onclick="rbc()">Show</button>
+                <h3 id="rbcout"></h3>
+            </div>
+        </div>
     </div>
+    <!-- 2nd parametre -->
+    <div>
+        <button id="myBtn">Check WBC count</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Enter your WBC count Value</h2>
+                <input type="number" name="WBC" id="wbcin">
+                <button onclick="wbc()">Show</button>
+                <h3 id="wbcout"></h3>
+            </div>
+        </div>
+    </div>
+    
 </body>
-
+<script src="index.js"></script>
+<script src="style.js"></script>
 </html>
