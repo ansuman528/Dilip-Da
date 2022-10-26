@@ -11,11 +11,11 @@
 <body>  
     <!-- 1st parameter -->
     <div> 
-        <button id="myBtn">Check RBC count</button>
-        <div id="myModal" class="modal">
+        <button id="myBtn" onclick="fun(1)">Check RBC count</button>
+        <div id="myModal1" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Enter your RBC count</h2>
+                <h2>Enter your RBC count Value</h2>
                 <input type="number" name="RBC" id="rbcin">
                 <button onclick="rbc()">Show</button>
                 <h3 id="rbcout"></h3>
@@ -24,10 +24,10 @@
     </div>
     <!-- 2nd parameter -->
     <div>
-        <button id="myBtn">Check WBC count</button>
-        <div id="myModal" class="modal">
+        <button id="myBtn" onclick="fun(2)">Check WBC count</button>
+        <div id="myModal2" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close2">&times;</span>
                 <h2>Enter your WBC count Value</h2>
                 <input type="number" name="WBC" id="wbcin">
                 <button onclick="wbc()">Show</button>
