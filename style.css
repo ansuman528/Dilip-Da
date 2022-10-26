@@ -36,19 +36,19 @@ body {
     color: white;
 }
 .container .card:nth-child(1) .icon {
-    background-image: url(rbc.jpeg);
+    background-image: url(/image/rbc.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container .card:nth-child(2) .icon {
-    background-image: url(wbc.jpg);
+    background-image: url(/image/wbc.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .container .card:nth-child(3) .icon {
-    background-image: url(Haemoglobin.jpg);
+    background-image: url(/image/Haemoglobin.jpg);
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: 110%;
 }
 
 .container .card .icon .fa {
