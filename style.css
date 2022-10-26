@@ -9,6 +9,7 @@ body {
 
 .container {
     padding: 5px;
+    height: 50vh;
     position: relative;
     display: flex;
 }
@@ -71,7 +72,7 @@ i {
 }
 
 .container .card .face {
-    width: 200px;
+    width: 238=9px;
     height: 200px;
     transition: 0.5s;
     
