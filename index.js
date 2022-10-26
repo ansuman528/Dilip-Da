@@ -1,7 +1,7 @@
 function wbc()
 {
-    const x = document.getElementById("").value; //this variable get the value of input
-    const value = document.getElementById("");// this variable get the value of output
+    const x = document.getElementById("wbcin").value; //this variable get the value of input
+    const value = document.getElementById("wbcout");// this variable get the value of output
     
     if(x < 52)
     {
