@@ -4,7 +4,7 @@ body {
     padding: 0;
     background: #333;   
     font-family: sans-serif;
-    background-color: #f1f1f1; 
+    background-color: #423b3b; 
 }
 
 .container {
@@ -47,6 +47,41 @@ body {
 }
 .container .card:nth-child(3) .icon {
     background-image: url(/image/Haemoglobin.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(4) .icon {
+    background-image: url(/image/hematocrit.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(9) .icon {
+    background-image: url(/image/platelet.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(10) .icon {
+    background-image: url(/image/Neutrophil.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(11) .icon {
+    background-image: url(/image/Eosinophil.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(12) .icon {
+    background-image: url(/image/Eosinophil.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(13) .icon {
+    background-image: url(/image/Lymphocyte.jpg);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+.container .card:nth-child(14) .icon {
+    background-image: url(/image/monocyte.jpg);
     background-repeat: no-repeat;
     background-size: 110%;
 }
