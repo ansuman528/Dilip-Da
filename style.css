@@ -51,22 +51,22 @@ body {
     background-size: 110%;
 }
 .container .card:nth-child(4) .icon {
-    background-image: url(/image/hematocrit.jpg);
+    background-image: url(/image/hematocrit.webp);
     background-repeat: no-repeat;
     background-size: 110%;
 }
 .container .card:nth-child(9) .icon {
-    background-image: url(/image/platelet.jpg);
+    background-image: url(/image/platelet.webp);
     background-repeat: no-repeat;
     background-size: 110%;
 }
 .container .card:nth-child(10) .icon {
-    background-image: url(/image/Neutrophil.jpg);
+    background-image: url(/image/Neutrophil.png);
     background-repeat: no-repeat;
     background-size: 110%;
 }
 .container .card:nth-child(11) .icon {
-    background-image: url(/image/Eosinophil.jpg);
+    background-image: url(/image/Eosinophil.png);
     background-repeat: no-repeat;
     background-size: 110%;
 }
