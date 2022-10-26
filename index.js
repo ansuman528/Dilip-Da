@@ -3,17 +3,17 @@ function wbc()
     const x = document.getElementById("wbcin").value; //this variable get the value of input
     const value = document.getElementById("wbcout");// this variable get the value of output
     
-    if(x < 52)
+    if(x < 4000)
     {
-        value.innerHTML = "wbc is low";
+        value.innerHTML = "WBC is low";
     }
-    else if(x > 75)
+    else if(x > 10000)
     {
-        value.innerHTML = "wbc is high";
+        value.innerHTML = "WBC is high";
     }
     else
     {
-        value.innerHTML = "Wbc is perfect";
+        value.innerHTML = "WBC is perfect";
     }
 }
 function rbc()
@@ -23,15 +23,15 @@ function rbc()
     
     if(x < 20)
     {
-        value.innerHTML = "rbc is low";//
+        value.innerHTML = "RBC is low";//
     }
     else if(x > 40)
     {
-        value.innerHTML = "rbc is high";
+        value.innerHTML = "RBC is high";
     }
     else
     {
-        value.innerHTML = "rbc is perfect";
+        value.innerHTML = "RBC is perfect";
     }
 }
 function Haemoglobin()
