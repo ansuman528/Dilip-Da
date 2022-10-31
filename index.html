@@ -4,502 +4,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBC Application</title>
-    <link rel="stylesheet" href="/style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
 </head>
-<body>  
-    
-    <div class="container">
-        <!-- 1st parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">RBC</span>
-                    </div>
-                </div>
+<body>
+    <section class="Container">
+        <section class='FlexContainer'>
+            <div class="header">
+                CBC Parameters
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(1)">Check RBC count</button>
-                    </h3>
-                    <p>Rbc is the main part of the body without it human can not servive</p>
-                </div>
+        </section>
+        <!-- Parameters 1 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="mg/lr">
             </div>
-            <div id="myModal1" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your RBC count Value</h2>
-                    <input type="number" name="RBC" id="rbcin">
-                    <button onclick="rbc()">Show</button>
-                    <h3 id="rbcout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 2 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">RBC =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-        <!-- 2nd parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">WBC</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 3 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Blood count =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(2)">Check WBC count</button>
-                    </h3>
-                    <p>Wbc is the main part of the body without it human can not servive</p>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 4 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div id="myModal2" class="modal">
-                <div class="modal-content">
-                    <span class="close2">&times;</span>
-                    <h2>Enter your WBC count Value</h2>
-                    <input type="number" name="WBC" id="wbcin">
-                    <button onclick="wbc()">Show</button>
-                    <h3 id="wbcout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 5 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-        <!-- 3rd parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Haemoglobin</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 6 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(3)">Check Haemoglobin count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 7 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div id="myModal3" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Haemoglobin count Value</h2>
-                    <input type="number" name="Haemoglobin" id="Haemoglobinin">
-                    <button onclick="Haemoglobin()">Show</button>
-                    <h3 id="Haemoglobinout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 8 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-        <!-- 4th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Hematocrit</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 9 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(4)">Check HCT count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 10 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div id="myModal4" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your HCT count Value</h2>
-                    <input type="number" name="HCT" id="HCTin">
-                    <button onclick="HCT()">Show</button>
-                    <h3 id="HCTout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 11 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-        <!-- 5th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Mean Corpuscular Volume</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 12 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(4)">Check MCV count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 13 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div id="myModal5" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your MCV count Value</h2>
-                    <input type="number" name="MCV" id="MCVin">
-                    <button onclick="MCV()">Show</button>
-                    <h3 id="MCVout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 14 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-        <!-- 6th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Mean Corpuscular Hemoglobin</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 15 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(6)">Check MCH count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 16 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div id="myModal6" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your MCH count Value</h2>
-                    <input type="number" name="MCH" id="MCHin">
-                    <button onclick="MCH()">Show</button>
-                    <h3 id="MCHout"></h3>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 17 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-        </div>
-    </div>
-    <div class="container">
-        <!-- 7th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">MCH Concentration</span>
-                    </div>
-                </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- Parameters 18 -->
+        <section class='FlexContainer'>
+            <div class="inputcontainer">
+                <label for="wbc">Wbc =</label><input type="number" name="Wbc" id="" placeholder="value here">
             </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(7)">Check MCHC count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal7" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your MCHC count Value</h2>
-                    <input type="number" name="MCHC" id="MCHCin">
-                    <button onclick="MCHC()">Show</button>
-                    <h3 id="MCHCout"></h3>
-                </div>
-            </div>
-        </div>
-        <!-- 8th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Red Cell Distribution Didth</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(8)">Check RDW count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal8" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your RDW count Value</h2>
-                    <input type="number" name="RDW" id="RDWin">
-                    <button onclick="RDW()">Show</button>
-                    <h3 id="RDWout"></h3>
-                    </div>
-                </div>
-        </div>
-        <!-- 9th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Platelet_Count</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(9)">Check Platelet count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal9" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Platelet_Count count Value</h2>
-                    <input type="number" name="Platelet" id="Plateletin">
-                    <button onclick="Platelet()">Show</button>
-                    <h3 id="Plateletout"></h3>
-                </div>
-            </div>
-        </div>
-        <!-- 10th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Neutrophil</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(10)">Check Neutrophil count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal10" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Neutrophi count Value</h2>
-                    <input type="number" name="Neutrophil" id="Neutrophilin">
-                    <button onclick="Neutrophil()">Show</button>
-                    <h3 id="Neutrophilout"></h3>
-                </div>
-            </div>
-        </div>
-        <!-- 11th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Eosinophil</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(11)">Check Eosinophil count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal11" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Eosinophi count Value</h2>
-                    <input type="number" name="Eosinophi" id="Eosinophiin">
-                    <button onclick="Eosinophi()">Show</button>
-                    <h3 id="Eosinophiout"></h3>
-                </div>
-            </div>
-        </div>
-        <!-- 12th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Basophil</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(12)">Check Basophil count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal12" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Basophil count Value</h2>
-                    <input type="number" name="Basophil" id="Basophilin">
-                    <button onclick="Basophil()">Show</button>
-                    <h3 id="Basophilout"></h3>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <!-- 13th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Lymphocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(13)">Check Lymphocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal13" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Lymphocyte count Value</h2>
-                    <input type="number" name="Lymphocyte" id="Lymphocytein">
-                    <button onclick="Lymphocyte()">Show</button>
-                    <h3 id="Lymphocyteout"></h3>
-                </div>
-            </div>
-        </div>
-        <!-- 14th parameter -->
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Monocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(14)">Check Monocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal14" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Monocyte count Value</h2>
-                    <input type="number" name="Monocyte" id="Monocytein">
-                    <button onclick="Monocyte()">Show</button>
-                    <h3 id="Monocyteout"></h3>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Monocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(14)">Check Monocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal14" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Monocyte count Value</h2>
-                    <input type="number" name="Monocyte" id="Monocytein">
-                    <button onclick="Monocyte()">Show</button>
-                    <h3 id="Monocyteout"></h3>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Monocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(14)">Check Monocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal14" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Monocyte count Value</h2>
-                    <input type="number" name="Monocyte" id="Monocytein">
-                    <button onclick="Monocyte()">Show</button>
-                    <h3 id="Monocyteout"></h3>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Monocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(14)">Check Monocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal14" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Monocyte count Value</h2>
-                    <input type="number" name="Monocyte" id="Monocytein">
-                    <button onclick="Monocyte()">Show</button>
-                    <h3 id="Monocyteout"></h3>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="face face1">
-                <div class="content">
-                    <div class="icon">
-                        <span class="rbc-span">Monocyte</span>
-                    </div>
-                </div>
-            </div>
-            <div class="face face2">
-                <div class="content">
-                    <h3>
-                        <button id="myBtn" onclick="fun(14)">Check Monocyte count</button>
-                    </h3>
-                    <p>Haemoglobin is the main part of the body without it human can not servive</p>
-                </div>
-            </div>
-            <div id="myModal14" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Enter your Monocyte count Value</h2>
-                    <input type="number" name="Monocyte" id="Monocytein">
-                    <button onclick="Monocyte()">Show</button>
-                    <h3 id="Monocyteout"></h3>
-                </div>
-            </div>
-        </div>
-    </div>
+            <div class="outputcontainer"> </div>
+        </section>
+        <!-- submit button -->
+        <section class='FlexContainer'>
+            <div class="submitbtn"><button onclick="submit()">submit</button></div>
+        </section>
+    </section>
 </body>
-<script src="index.js"></script>
-<script src="style.js"></script>
 </html>
