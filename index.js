@@ -1,288 +1,527 @@
 function WBC()
 {
-    const x = document.getElementById("WBCin").value; //this variable get the value of input
+    const x = document.getElementById("WBCin"); //this variable get the value of input
     const value = document.getElementById("WBCout");// this variable get the value of output
-    
-    if(x < 4000)
-    {
-        value.innerHTML = "WBC is low";
-    }
-    else if(x > 10000)
-    {
-        value.innerHTML = "WBC is high";
-    }
-    else
-    {
-        value.innerHTML = "WBC is perfect";
-    }
+
+        if(x.value == '')
+        {
+            x.setAttribute("placeholder", "Enter the value");
+            value.innerHTML = "";
+            x.style.border = "1.5px solid red";
+        }
+        else
+        {
+            x.style.border = "1.5px solid green";
+            if(x.value < 4000)
+            {
+                value.innerHTML = "WBC is low";
+                value.style.color = "red";
+            }
+            else if(x.value > 10000)
+            {
+                value.innerHTML = "WBC is high";
+                value.style.color = "red";
+            }
+            else
+            {
+                value.innerHTML = "WBC is perfect";
+                value.style.color = "green";
+            }
+        }
 }
 function RBC()
 {
-    const x = document.getElementById("RBCin").value; //this variable get the value of input
+    const x = document.getElementById("RBCin"); //this variable get the value of input
     const value = document.getElementById("RBCout");// this variable get the value of output
     
-    if(x < 20)
-    {
-        value.innerHTML = "RBC is low";//
-    }
-    else if(x > 40)
-    {
-        value.innerHTML = "RBC is high";
-    }
-    else
-    {
-        value.innerHTML = "RBC is perfect";
-    }
+    if(x.value == '')
+        {
+            x.setAttribute("placeholder", "Enter the value");
+            value.innerHTML = "";
+            x.style.border = "1.5px solid red";
+        }
+        else
+        {
+            x.style.border = "1.5px solid green";
+            if(x.value < 20)
+            {
+                value.innerHTML = "RBC is low";
+                value.style.color = "red";
+            }
+            else if(x.value > 40)
+            {
+                value.innerHTML = "RBC is high";
+                value.style.color = "red";
+            }
+            else
+            {
+                value.innerHTML = "RBC is perfect";
+                value.style.color = "green";
+            }
+        }
 }
 function Haemoglobin()
 {
-    const x = document.getElementById("Haemoglobiin").value; //this variable get the value of input
+    const x = document.getElementById("Haemoglobiin"); //this variable get the value of input
     const value = document.getElementById("Haemoglobiout");// this variable get the value of output
     
-    if(x < 12)
+    if(x.value == '')
     {
-        value.innerHTML = "HB is low";//
-    }
-    else if(x > 15)
-    {
-        value.innerHTML = "HB is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "HB is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 12)
+        {
+            value.innerHTML = "Haemoglobin is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 15)
+        {
+            value.innerHTML = "Haemoglobin is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Haemoglobin is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function HCT()
 {
-    const x = document.getElementById("HCTin").value; //this variable get the value of input
+    const x = document.getElementById("HCTin"); //this variable get the value of input
     const value = document.getElementById("HCTout");// this variable get the value of output
-    
-    if(x < 36)
+    if(x.value == '')
     {
-        value.innerHTML = "HCT is low";//
-    }
-    else if(x > 45)
-    {
-        value.innerHTML = "HCT is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "HCT is perfect";
+        x.style.border = "1.5px solid green";  
+        if(x.value < 36)
+        {
+            value.innerHTML = "HCT is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 45)
+        {
+            value.innerHTML = "HCT is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "HCT is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function MCV()
 {
-    const x = document.getElementById("MCVin").value; //this variable get the value of input
+    const x = document.getElementById("MCVin"); //this variable get the value of input
     const value = document.getElementById("MCVout");// this variable get the value of output
     
-    if(x < 83)
+    if(x.value == '')
     {
-        value.innerHTML = "MCV is low";//
-    }
-    else if(x > 101)
-    {
-        value.innerHTML = "MCV is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "MCV is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 83)
+        {
+            value.innerHTML = "MCV is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 101)
+        {
+            value.innerHTML = "MCV is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "MCV is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function MCH()
 {
-    const x = document.getElementById("MCHin").value; //this variable get the value of input
+    const x = document.getElementById("MCHin"); //this variable get the value of input
     const value = document.getElementById("MCHout");// this variable get the value of output
-    
-    if(x < 27)
+    if(x.value == '')
     {
-        value.innerHTML = "MCH is low";//
-    }
-    else if(x > 32)
-    {
-        value.innerHTML = "MCH is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "MCH is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 27)
+        {
+            value.innerHTML = "MCH is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 32)
+        {
+            value.innerHTML = "MCH is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "MCH is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function MCHC()
 {
-    const x = document.getElementById("MCHCin").value; //this variable get the value of input
+    const x = document.getElementById("MCHCin"); //this variable get the value of input
     const value = document.getElementById("MCHCout");// this variable get the value of output
-    
-    if(x < 32)
+    if(x.value == '')
     {
-        value.innerHTML = "MCHC is low";//
-    }
-    else if(x > 35)
-    {
-        value.innerHTML = "MCHC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "MCHC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 32)
+        {
+            value.innerHTML = "MCHC is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 35)
+        {
+            value.innerHTML = "MCHC is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "MCHC is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function RDW()
 {
-    const x = document.getElementById("RDWin").value; //this variable get the value of input
+    const x = document.getElementById("RDWin"); //this variable get the value of input
     const value = document.getElementById("RDWout");// this variable get the value of output
     
-    if(x < 12)
+    if(x.value == '')
     {
-        value.innerHTML = "RDW is low";//
-    }
-    else if(x > 14)
-    {
-        value.innerHTML = "RDW is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "RDW is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 12)
+        {
+            value.innerHTML = "RDW is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 14)
+        {
+            value.innerHTML = "RDW is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "RDW is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Platelet()
 {
-    const x = document.getElementById("Plateletin").value; //this variable get the value of input
+    const x = document.getElementById("Plateletin"); //this variable get the value of input
     const value = document.getElementById("Plateletout");// this variable get the value of output
-    
-    if(x < 2)
+    if(x.value == '')
     {
-        value.innerHTML = "PC is low";//
-    }
-    else if(x > 4)
-    {
-        value.innerHTML = "PC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "PC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 2)
+        {
+            value.innerHTML = "Platelet is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 4)
+        {
+            value.innerHTML = "Platelet is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Platelet is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Neutrophil()
 {
-    const x = document.getElementById("Neutrophilin").value; //this variable get the value of input
-    const value = document.getElementById(" Neutrophilout");// this variable get the value of output
-    
-    if(x < 40)
+    const x = document.getElementById("Neutrophilin"); //this variable get the value of input
+    const value = document.getElementById("Neutrophilout");// this variable get the value of output
+    if(x.value == '')
     {
-        value.innerHTML = "NC is low";//
-    }
-    else if(x > 80)
-    {
-        value.innerHTML = "NC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "NC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 40)
+        {
+            value.innerHTML = "Neutrophil is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 80)
+        {
+            value.innerHTML = "Neutrophil is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Neutrophil is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Eosinophil()
 {
-    const x = document.getElementById("Eosinophilin").value; //this variable get the value of input
+    const x = document.getElementById("Eosinophilin"); //this variable get the value of input
     const value = document.getElementById("Eosinophilout");// this variable get the value of output
     
-    if(x < 1)
+    if(x.value == '')
     {
-        value.innerHTML = "EC is low";//
-    }
-    else if(x > 6)
-    {
-        value.innerHTML = "EC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "EC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 1)
+        {
+            value.innerHTML = "Eosinophil is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 6)
+        {
+            value.innerHTML = "Eosinophil is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Eosinophil is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Basophil()
 {
-    const x = document.getElementById("Basophiin").value; //this variable get the value of input
+    const x = document.getElementById("Basophiin"); //this variable get the value of input
     const value = document.getElementById("Basophiout");// this variable get the value of output
-    
-    if(x < 1)
+    if(x.value == '')
     {
-        value.innerHTML = "BC is low";//
-    }
-    else if(x > 2)
-    {
-        value.innerHTML = "BC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "BC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 1)
+        {
+            value.innerHTML = "Basophil is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 2)
+        {
+            value.innerHTML = "Basophil is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Basophil is perfect";
+            value.style.color = "green";
+        }
+
     }
 }
 function Lymphocyte()
 {
-    const x = document.getElementById("Lymphocytein").value; //this variable get the value of input
+    const x = document.getElementById("Lymphocytein"); //this variable get the value of input
     const value = document.getElementById("Lymphocyteout");// this variable get the value of output
-    
-    if(x < 20)
+    if(x.value == '')
     {
-        value.innerHTML = "LC is low";//
-    }
-    else if(x > 40)
-    {
-        value.innerHTML = "LC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "LC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 20)
+        {
+            value.innerHTML = "Lymphocyte is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 40)
+        {
+            value.innerHTML = "Lymphocyte is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Lymphocyte is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Monocyte()
 {
-    const x = document.getElementById("Monocytein").value; //this variable get the value of input
+    const x = document.getElementById("Monocytein"); //this variable get the value of input
     const value = document.getElementById("Monocyteout");// this variable get the value of output
     
-    if(x < 2)
+    if(x.value == '')
     {
-        value.innerHTML = "MC is low";//
-    }
-    else if(x > 10)
-    {
-        value.innerHTML = "MC is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "MC is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 2)
+        {
+            value.innerHTML = "Monocyte is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 10)
+        {
+            value.innerHTML = "Monocyte is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Monocyte is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function Plateletcrit()
 {
-    const x = document.getElementById("Plateletcritin").value; //this variable get the value of input
+    const x = document.getElementById("Plateletcritin"); //this variable get the value of input
     const value = document.getElementById("Plateletcritout");// this variable get the value of output
-    
-    if(x < 2)
+    if(x.value == '')
     {
-        value.innerHTML = "pl is low";//
-    }
-    else if(x > 10)
-    {
-        value.innerHTML = "pl is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "pl is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 2)
+        {
+            value.innerHTML = "Plateletcrit is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 10)
+        {
+            value.innerHTML = "Plateletcrit is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "Plateletcrit is perfect";
+            value.style.color = "green";
+        }
     }
 }
 function RDW_CV()
 {
-    const x = document.getElementById("RDW_CVin").value; //this variable get the value of input
+    const x = document.getElementById("RDW_CVin"); //this variable get the value of input
     const value = document.getElementById("RDW_CVout");// this variable get the value of output
     
-    if(x < 2)
+if(x.value == '')
     {
-        value.innerHTML = "RDW_CV is low";//
-    }
-    else if(x > 10)
-    {
-        value.innerHTML = "RDW_CV is high";
+        x.setAttribute("placeholder", "Enter the value");
+        value.innerHTML = "";
+        x.style.border = "1.5px solid red";
     }
     else
     {
-        value.innerHTML = "RDW_CV is perfect";
+        x.style.border = "1.5px solid green";
+        if(x.value < 2)
+        {
+            value.innerHTML = "RDW_CV is low";
+            value.style.color = "red";
+        }
+        else if(x.value > 10)
+        {
+            value.innerHTML = "RDW_CV is high";
+            value.style.color = "red";
+        }
+        else
+        {
+            value.innerHTML = "RDW_CV is perfect";
+            value.style.color = "green";
+        }
     }
 }
+const reset =()=>
+{
+    const x = document.getElementsByClassName("FlexContainer");
+    for (let i = 1; i < x.length-1; i++) {
+        x[i].getElementsByTagName("input")[0].value = '';
+        x[i].getElementsByTagName("input")[0].style.border = "1px solid red";
+    }
+    const p = document.getElementsByClassName("FlexContainer");
+    for (let i = 1; i < p.length-1; i++) {
+        p[i].getElementsByTagName("span")[0].innerHTML = '';
+    }
+}
+const randomInput=(limit)=>{
+    const x = document.getElementsByClassName("FlexContainer");
+    for (let i = 1; i < x.length-1; i++) {
+        x[i].getElementsByTagName("input")[0].value = Math.random() * limit;
+    }
+}
+const submit = () => {
+    randomInput(100);
+    RBC();
+    WBC();
+    Haemoglobin();
+    HCT();
+    MCV();
+    MCH();
+    MCHC();
+    RDW();
+    Platelet();
+    Neutrophil();
+    Eosinophil();
+    Basophil();
+    Lymphocyte();
+    Monocyte();
+    Plateletcrit();
+    RDW_CV();
+}
+setInterval(submit, 500);
