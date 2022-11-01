@@ -1,7 +1,7 @@
-function wbc()
+function WBC()
 {
-    const x = document.getElementById("wbcin").value; //this variable get the value of input
-    const value = document.getElementById("wbcout");// this variable get the value of output
+    const x = document.getElementById("WBCin").value; //this variable get the value of input
+    const value = document.getElementById("WBCout");// this variable get the value of output
     
     if(x < 4000)
     {
@@ -16,10 +16,10 @@ function wbc()
         value.innerHTML = "WBC is perfect";
     }
 }
-function rbc()
+function RBC()
 {
-    const x = document.getElementById("rbcin").value; //this variable get the value of input
-    const value = document.getElementById("rbcout");// this variable get the value of output
+    const x = document.getElementById("RBCin").value; //this variable get the value of input
+    const value = document.getElementById("RBCout");// this variable get the value of output
     
     if(x < 20)
     {
@@ -248,5 +248,41 @@ function Monocyte()
     else
     {
         value.innerHTML = "MC is perfect";
+    }
+}
+function Plateletcrit()
+{
+    const x = document.getElementById("Plateletcritin").value; //this variable get the value of input
+    const value = document.getElementById("Plateletcritout");// this variable get the value of output
+    
+    if(x < 2)
+    {
+        value.innerHTML = "pl is low";//
+    }
+    else if(x > 10)
+    {
+        value.innerHTML = "pl is high";
+    }
+    else
+    {
+        value.innerHTML = "pl is perfect";
+    }
+}
+function RDW_coefficient of variation(RDW_CV)()
+{
+    const x = document.getElementById("RDW_coefficient of variation(RDW_CV)in").value; //this variable get the value of input
+    const value = document.getElementById("RDW_coefficient of variation(RDW_CV)out");// this variable get the value of output
+    
+    if(x < 2)
+    {
+        value.innerHTML = "RDW_CV is low";//
+    }
+    else if(x > 10)
+    {
+        value.innerHTML = "RDW_CV is high";
+    }
+    else
+    {
+        value.innerHTML = "RDW_CV is perfect";
     }
 }
