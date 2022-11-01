@@ -268,10 +268,10 @@ function Plateletcrit()
         value.innerHTML = "pl is perfect";
     }
 }
-function RDW_coefficient of variation(RDW_CV)()
+function RDW_CV()
 {
-    const x = document.getElementById("RDW_coefficient of variation(RDW_CV)in").value; //this variable get the value of input
-    const value = document.getElementById("RDW_coefficient of variation(RDW_CV)out");// this variable get the value of output
+    const x = document.getElementById("RDW_CVin").value; //this variable get the value of input
+    const value = document.getElementById("RDW_CVout");// this variable get the value of output
     
     if(x < 2)
     {
