@@ -17,7 +17,7 @@ function WBC()
                 value.innerHTML = "WBC is low";
                 value.style.color = "red";
             }
-            else if(x.value > 10000)
+            else if(x.value > 11000)
             {
                 value.innerHTML = "WBC is high";
                 value.style.color = "red";
@@ -439,12 +439,12 @@ function Plateletcrit()
     else
     {
         x.style.border = "1.5px solid green";
-        if(x.value < 2)
+        if(x.value < 0.22)
         {
             value.innerHTML = "Plateletcrit is low";
             value.style.color = "red";
         }
-        else if(x.value > 10)
+        else if(x.value > 0.24)
         {
             value.innerHTML = "Plateletcrit is high";
             value.style.color = "red";
@@ -470,12 +470,12 @@ if(x.value == '')
     else
     {
         x.style.border = "1.5px solid green";
-        if(x.value < 2)
+        if(x.value < 11.5)
         {
             value.innerHTML = "RDW_CV is low";
             value.style.color = "red";
         }
-        else if(x.value > 10)
+        else if(x.value > 15.4)
         {
             value.innerHTML = "RDW_CV is high";
             value.style.color = "red";
