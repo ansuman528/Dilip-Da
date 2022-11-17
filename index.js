@@ -4,7 +4,7 @@ function getFuncName() {
  const crate_link=(link_name,value)=>
  {
     const link = document.createElement("a");
-    link.href = link_name+".html";
+    link.href = 'pages\\'+ link_name+ '.html';
     link.innerHTML = "learn more";
     link.setAttribute("target", "_blank");
     link.style.fontSize = "0.8rem";
@@ -109,11 +109,11 @@ const submit = () => {
         ["Monocyte",2,10],
         ["Plateletcrit",0.22,0.24],
         ["RDW_CV",11.5,15.4],   
-    ];
+     ]; 
+     //Array of arrays for storing value name and parameter
     randomInput(100)
     parameter.forEach(element => {
         const x = new parameter_class(element[0], element[1], element[2]);
         run(x);
     });
 }
-setInterval(submit, 500);
