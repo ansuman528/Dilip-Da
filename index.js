@@ -1,14 +1,27 @@
 function getFuncName() {
     return getFuncName.caller.name
  }
- const crate_link=(link_name,value)=>
+ const crate_link=(link_name,value,result)=>
  {
     const link = document.createElement("a");
-    link.href = 'pages\\'+ link_name+ '.html';
+    if(result == "low")
+    {
+        link.href = 'pages\\'+ link_name+ '.html';
+        
+    link.innerHTML = "learn more";
+    link.setAttribute("target", "_blank");
+    link.style.fontSize = "0.8rem";
+    value.appendChild(link); 
+    }
+    else if(result == "high")
+    {
+        link.href = 'page_for_high\\'+ link_name+ '_high.html';
+        
     link.innerHTML = "learn more";
     link.setAttribute("target", "_blank");
     link.style.fontSize = "0.8rem";
     value.appendChild(link);
+    }
  }
  const reset =()=>
 {
@@ -22,27 +35,6 @@ function getFuncName() {
         p[i].getElementsByTagName("span")[0].innerHTML = '';
     }
 }
-// const randomInput=(element)=>{
-//     const x = document.getElementById(element.name+"in");
-//     if(x)
-//     {
-//         if(element.low >0 && element.high <1)
-//         {
-//             x.value = Math.random()/10;
-//         }
-//         if(element.low > 1 && element.high < 10)
-//         {
-//             x.value = Math.floor(Math.random());
-//         }
-//         if (element.low > 10 && element.high < 100) {
-//             x.value = Math.floor(Math.random() * 100);
-//         }
-//         else {
-//             x.value = Math.floor(Math.random() * 1000);    
-//         }
-//     }
-//     console.log(x.value);
-// }
 const randomInput=(limit)=>{
     const x = document.getElementsByClassName("FlexContainer");
     for (let i = 1; i < x.length-1; i++) {
@@ -64,16 +56,19 @@ const validate =(x,value,link_name,low_val,high_val)=>
             {
                 value.innerHTML = link_name+"is low";
                 value.style.color = "red";
+                return "low";
             }
             else if(x.value > high_val)
             {
                 value.innerHTML = link_name+" is high";
                 value.style.color = "red";
+                return "high";
             }
             else
             {
                 value.innerHTML = link_name+"is perfect";
                 value.style.color = "green";
+                return "perfect";
             }
         }
  }
@@ -81,8 +76,8 @@ const validate =(x,value,link_name,low_val,high_val)=>
  {
     const x = document.getElementById(element.name+"in"); //this variable get the value of input
     const value = document.getElementById(element.name+"out");// this variable get the value of output
-    validate(x,value,element.name,element.low,element.high);
-    crate_link(element.name,value);
+    const result = validate(x,value,element.name,element.low,element.high);
+    crate_link(element.name,value,result);
  }
  class parameter_class {
     constructor(name, low, high) {
