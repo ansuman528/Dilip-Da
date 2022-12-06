@@ -90,7 +90,7 @@ const submit = () => {
     const parameter = [
         ["RBC",20,40],
         ["WBC",4000,11000],
-        ["Haemoglobin",12,15],
+        ["Heaomoglobin",12,15],
         ["HCT",36,45],
         ["MCV",83,101],
         ["MCH",27,32],
