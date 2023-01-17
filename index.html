@@ -4,171 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="./style.js"></script>
-    <script src="./index.js"></script>
-    <title>CBC Application</title>
+    <link rel="stylesheet" href="style_main.css">
+    <title>Document</title>
 </head>
 <body>
-    <section class="Container">
-        <section class='FlexContainer'>
-            <div class="header">
-                CBC Parameters
-            </div>
-        </section>
-        <!-- Parameters 1 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="rbc">RBC =</label><input type="number" name="RBC" id="RBCin" placeholder="lakhs/cu mm" required>
-            </div>
-            <div class="outputcontainer">
-                <span id="RBCout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 2 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">WBC =</label><input type="number" name="WBC" id="WBCin" placeholder="cu mm" required >
-            </div>
-            <div class="outputcontainer">
-                <span id="WBCout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 3 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="Haemoglobin">Haemoglobin =</label><input type="number" name="Haemoglobin" id="Heaomoglobinin" placeholder="g/dL">
-            </div>
-            <div class="outputcontainer">
-                <span id="Heaomoglobinout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 4 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">HCT =</label><input type="number" name="HCT" id="HCTin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="HCTout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 5 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">MCV =</label><input type="number" name="MCV" id="MCVin" placeholder="fL">
-            </div>
-            <div class="outputcontainer">
-                <span id="MCVout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 6 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">MCH =</label><input type="number" name="MCH" id="MCHin" placeholder="Pg">
-            </div>
-            <div class="outputcontainer">
-                <span id="MCHout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 7 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">MCHC =</label><input type="number" name="MCHC" id="MCHCin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="MCHCout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 8 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">RDW =</label><input type="number" name="RDW" id="RDWin" placeholder="fL">
-            </div>
-            <div class="outputcontainer">
-                <span id="RDWout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 9 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Platelet =</label><input type="number" name="Platelet" id="Plateletin" placeholder="lakhs/cu mm">
-            </div>
-            <div class="outputcontainer">
-                <span id="Plateletout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 10 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Neutrophil =</label><input type="number" name="Neutrophil" id="Neutrophilin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Neutrophilout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 11 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Eosinophil =</label><input type="number" name="Eosinophil" id="Eosinophilin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Eosinophilout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 12 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Basophil =</label><input type="number" name="Basophil" id="Basophilin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Basophilout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 15 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Lymphocyte =</label><input type="number" name="Lymphocyte" id="Lymphocytein" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Lymphocyteout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 16 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Monocyte =</label><input type="number" name="Monocyte" id="Monocytein" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Monocyteout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 17 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">Plateletcrit =</label><input type="number" name="Plateletcrit" id="Plateletcritin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="Plateletcritout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- Parameters 18 -->
-        <section class='FlexContainer'>
-            <div class="inputcontainer">
-                <label for="wbc">RDW_CV =</label><input type="number" name="RDW_CV" id="RDW_CVin" placeholder="%">
-            </div>
-            <div class="outputcontainer">
-                <span id="RDW_CVout">Some Info will be here</span>
-            </div>
-        </section>
-        <!-- submit button -->
-        <section class='FlexContainer'>
-            <div class="submitbtn"><button id="submitbtn" onclick="submit()">submit</button>
-                <button id="resetbtn" onclick="reset()">reset</button>
-            </div>
-        </section>
-    </section>
+    <div class="login-box">
+        <h2>Patient Information</h2>
+        <form>
+          <div class="user-box">
+            <input type="text" name="name" required="">
+            <label>Name</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="age" required="">
+            <label>Age</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="email" required="">
+            <label>Email</label>
+          </div>
+          <div>
+            <input type='radio' id='male' checked='checked' name='sex' value="male">
+            <label for='male'>Male</label>
+            <input type='radio' id='female' name='sex' value="female">
+            <label for='female'>Female</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
 </body>
+<script>
+    const btn = document.querySelector("a");
+    btn.addEventListener("click", function(){
+        const name = document.querySelector("input[name='name']").value;
+        const age = document.querySelector("input[name='age']").value;
+        const email = document.querySelector("input[name='email']").value;
+        if(name == "" || age == "" || email == ""){
+            alert("Please fill all the fields");
+            return;
+        }
+        else
+        {
+            localStorage.setItem("name", document.querySelector("input[name='name']").value);
+            localStorage.setItem("age", document.querySelector("input[name='age']").value);
+            localStorage.setItem("email", document.querySelector("input[name='email']").value);
+            const male = document.getElementById('male');
+            const female = document.getElementById('female');
+            if(male.checked){
+                localStorage.setItem("sex",male.value);
+            }
+            else{
+                localStorage.setItem("sex",female.value);
+            }
+            window.location.href = "mainContent.html"
+        }
+    })
+</script>
 </html>
