@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+    <title>Patient Login</title>
 </head>
 <body>
     <div class="login-box">
@@ -13,7 +14,7 @@
         <form>
           <div class="user-box">
             <input type="text" name="name" required="">
-            <label>Name</label>
+            <label for="name">Name</label>
           </div>
           <div class="user-box">
             <input type="number" name="age" required="">
@@ -39,31 +40,5 @@
         </form>
       </div>
 </body>
-<script>
-    const btn = document.querySelector("a");
-    btn.addEventListener("click", function(){
-        const name = document.querySelector("input[name='name']").value;
-        const age = document.querySelector("input[name='age']").value;
-        const email = document.querySelector("input[name='email']").value;
-        if(name == "" || age == "" || email == ""){
-            alert("Please fill all the fields");
-            return;
-        }
-        else
-        {
-            localStorage.setItem("name", document.querySelector("input[name='name']").value);
-            localStorage.setItem("age", document.querySelector("input[name='age']").value);
-            localStorage.setItem("email", document.querySelector("input[name='email']").value);
-            const male = document.getElementById('male');
-            const female = document.getElementById('female');
-            if(male.checked){
-                localStorage.setItem("sex",male.value);
-            }
-            else{
-                localStorage.setItem("sex",female.value);
-            }
-            window.location.href = "mainContent.html"
-        }
-    })
-</script>
+<script src="index.js"></script>
 </html>

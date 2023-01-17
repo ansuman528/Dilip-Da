@@ -84,10 +84,3 @@ body
 {
     font-size: 5px;
 }
-@-moz-document url-prefix() {
-.flex-container {
-    width: 100%;
-    -moz-box-sizing: border-box;
-    }
-
-}

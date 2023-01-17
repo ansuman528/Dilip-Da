@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="./style.js"></script>
-    <script src="./index.js"></script>
+    
     <title>CBC Application</title>
 </head>
 <body>
@@ -167,31 +166,39 @@
         <!-- submit button -->
         <section class='FlexContainer'>
             <div class="submitbtn">
-                <button id="submitbtn" onclick="submit()">submit</button>
-                <button id="resetbtn" onclick="reset()">reset</button>
+                <button id="submitbtn">submit</button>
+                <button id="resetbtn">reset</button>
                 <a id="moreResult" href="#demo-modal">More..</a>
             </div>
         </section>
         <div id="demo-modal" class="modal">
             <div class="modal__content">
-                <div>
                     <div>
-                        <h4>Select paramater</h4>
+                        <span>Select paramater</span>
                     </div>
                     <div>
-                        <input type='radio' id='abnormal' name='abnormal' value="abnormal">
+                        <input type='radio' id='abnormal'  name='abnormal' value="abnormal">
                         <label for='abnormal'>Abnormal</label>
                         <input type='radio' id='normal' name='normal' value="normal">
                         <label for='normal'>Normal</label>
-                        </div>
-                    <div class="submitbtn">
-                        <button id="submitbtn">submit</button>
                     </div>
-                </div>
+                    <div class="submitbtn">
+                        <a id="moreResult__content" href="#demo-modal_overlay">submit</a>
+                    </div>
                 <a href="#" class="modal__close">&times;</a>
+            </div>
+        </div>
+        <div id="demo-modal_overlay" class="modal">
+            <div class="modal__content__overlay">
+                <div>
+                    <ol id="order_list">
+                    </ol>
+                </div>
+                <a href="#" id="modal_close" class="modal__close">&times;</a>
             </div>
         </div>
     </section>
     
 </body>
+<script src="./style.js"></script>
 </html>
