@@ -1,5 +1,5 @@
 
-
+dataArray = [];
 function getFuncName() {
     return getFuncName.caller.name
  }
@@ -83,6 +83,7 @@ const validate =(x,value,link_name,low_val,high_val)=>
     const value = document.getElementById(element.name+"out");// this variable get the value of output
     const result = validate(x,value,element.name,element.low,element.high);
     crate_link(element.name,value,result);
+    return x;
  }
  class parameter_class {
     constructor(name, low, high) {
@@ -119,8 +120,14 @@ const submit = () => {
     randomInput(100)
     parameter.forEach(element => {
         const x = new parameter_class(element[0], element[1], element[2]);
-        run(x);
+        let val = run(x);
+        let temp_data = {
+            name: x.name,
+            value: val.value
+        }
+        dataArray.push(temp_data);
     });
+    postData();
 }
 
 
@@ -162,3 +169,48 @@ modal_close.addEventListener("click", () => {
         order_list.removeChild(order_list.firstChild);
     }
 });
+
+
+console.log(dataArray);
+
+const saveParam = "http://localhost:3000/saveParam"
+
+async function postData()
+{
+    data = {
+        RBC: dataArray[0].value,
+        WBC: dataArray[1].value,
+        Heaomoglobin: dataArray[2].value,
+        HCT: dataArray[3].value,
+        MCV: dataArray[4].value,
+        MCH: dataArray[5].value,
+        MCHC: dataArray[6].value,
+        RDW: dataArray[7].value,
+        Platelet: dataArray[8].value,
+        Neutrophil: dataArray[9].value,
+        Eosinophil: dataArray[10].value,
+        Basophil: dataArray[11].value,
+        Lymphocyte: dataArray[12].value,
+        Monocyte: dataArray[13].value,
+        Plateletcrit: dataArray[14].value,
+        RDW_CV: dataArray[15].value,
+    }
+    await fetch(saveParam, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+
+    })
+    .then(response => {
+        // Handle response from server
+        console.log('Response:', response.json());
+    })
+    .catch(error => {
+        // Handle error
+        console.log(error);
+    });
+    dataArray.splice(0,dataArray.length);
+}
+    
