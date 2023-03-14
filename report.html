@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <section style="text-align: center;">
+        <h1>Report</h1>
+    </section>
+    <section>
+        <h3>Patient Information</h3>
+        <div>
+            Name : <span id="name">John Doe</span><br>
+            Gender : <span id="gender">Male</span><br>
+            Age : <span id="age">20</span>
+        </div>
+    </section>
+    <section>
+        <h3>Abnormal Parameters</h3>
+        <div style="margin-left: 10px ;" id="abnormal_behave">
+        </div>
+    </section>
+    <section>
+        <h3>possible Diseases</h3>
+        <div>
+            <ul id="diseases">
+                
+            </ul>
+        </div>
+    </section>
+</body>
+<script>
+    function printPage() {
+        setTimeout(function(){window.print();}, 1000);
+    }
+    function getData(){
+        var stored = JSON.parse(localStorage.getItem("abnormal"));
+        let list = document.getElementById('abnormal_behave')
+        for(let i=0;i<stored.length;i++){
+            let li = document.createElement('span')
+            let comma = document.createElement('span')
+            comma.innerHTML=", "
+            li.innerHTML=stored[i]
+            list.appendChild(li)
+            list.appendChild(comma)
+        }
+        let url = "http://localhost:3000/generateReport"
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+            let name = document.getElementById('name')
+            let gender = document.getElementById('gender')
+            let age = document.getElementById('age')
+            console.log(data);
+            name.innerHTML=data[3]
+            gender.innerHTML=data[1]
+            age.innerHTML=data[2]
+            let list = document.getElementById('diseases')
+            for(let i=0;i<data[0].length;i++){
+                let li = document.createElement('li')
+                li.innerHTML=data[0][i]
+                list.appendChild(li)
+            }
+
+
+        })
+    }
+    getData();
+    printPage();
+
+</script>
+</html>

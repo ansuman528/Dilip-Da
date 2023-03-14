@@ -1,5 +1,6 @@
 
 dataArray = [];
+abnormal_behavior = [];
 function getFuncName() {
     return getFuncName.caller.name
  }
@@ -59,6 +60,7 @@ const validate =(x,value,link_name,low_val,high_val)=>
                 value.innerHTML = link_name+"is low";
                 value.style.color = "red";
                 abnormal_array.push(link_name);
+                abnormal_behavior.push(link_name);
                 return "low";
             }
             else if(x.value > high_val)
@@ -66,6 +68,8 @@ const validate =(x,value,link_name,low_val,high_val)=>
                 value.innerHTML = link_name+" is high";
                 value.style.color = "red";
                 abnormal_array.push(link_name);
+                abnormal_behavior.push(link_name);
+                localStorage.setItem(link_name, x.value);
                 return "high";
             }
             else
@@ -95,6 +99,7 @@ const validate =(x,value,link_name,low_val,high_val)=>
 const print_array = () =>{
     console.log(abnormal.checked);
     console.log(normal.checked);
+    
     if(abnormal.checked)
     {
         abnormal_array.forEach(element => {
@@ -118,6 +123,7 @@ const submit = () => {
     abnormal_array.splice(0,abnormal_array.length);
     normal_array.splice(0,normal_array.length);
     randomInput(100)
+
     parameter.forEach(element => {
         const x = new parameter_class(element[0], element[1], element[2]);
         let val = run(x);
@@ -127,6 +133,8 @@ const submit = () => {
         }
         dataArray.push(temp_data);
     });
+    console.log(abnormal_array);
+    localStorage.setItem("abnormal", JSON.stringify(abnormal_array));
     postData();
 }
 
@@ -143,11 +151,21 @@ const modal_check_button_validation = (abnormal,normal) =>{
         }
     });
 }
+const genReport = () => {
+    // window.location.href = "";
+    // window.open(report.html, '_blank');
+    NewTab();
+}
+function NewTab() {
+    window.open(
+    "report.html", "_blank");
+}
 
 
 const parameter = [["RBC",20,40],["WBC",4000,11000],["Heaomoglobin",12,15],["HCT",36,45],["MCV",83,101],["MCH",27,32],["MCHC",32,35],["RDW",12,14],["Platelet",2,4],["Neutrophil",40,80],["Eosinophil",1,6],["Basophil",1,2],["Lymphocyte",20,40],["Monocyte",2,10],["Plateletcrit",0.22,0.24],["RDW_CV",11.5,15.4],];
 const submit_btn = document.getElementById("submitbtn");
 const reset_btn = document.getElementById("resetbtn");
+const report_generation = document.getElementById("gen_report");
 const submit_for_report_gen = document.querySelector('#submit_for_report_gen');
 const normal_array = [];
 const abnormal_array = [];
@@ -157,6 +175,7 @@ const modal_close = document.querySelector('#modal_close');
 
 submit_btn.addEventListener("click", submit);
 reset_btn.addEventListener("click", reset);
+report_generation.addEventListener("click", genReport);
 const abnormal = document.querySelector('#abnormal');
 const normal = document.querySelector('#normal');
 modal_check_button_validation(abnormal,normal);

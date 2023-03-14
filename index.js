@@ -18,7 +18,6 @@ const validation = async () =>{
                 checked = female.value
             }
             await postData(name,age,email,checked);
-            window.location.href = "mainContent.html"
             
         }
 }
@@ -29,10 +28,20 @@ btn.addEventListener("click", validation)
 const saveUser = "http://localhost:3000/saveUser"
 // const saveParam = "http://localhost:3000/saveParam"
 
+const sessionIdGnerator = async () => {
+    let sessionId = "";
+    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (let i = 0; i < 5; i++)
+        sessionId += possible.charAt(Math.floor(Math.random() * possible.length));
+    return sessionId;
+}
+
+
 async function postData(per_name,per_age,per_email,per_gender)
 {
     // let person = {"name":per_name, "age":per_age, "email":per_email,"gender":per_gender};
-    person = {name: per_name,age:per_age,email:per_email,gender:per_gender}
+    person = {name: per_name,age:per_age,email:per_email,gender:per_gender,sessionId:await sessionIdGnerator()}
+    console.log(person);
     await fetch(saveUser, {
         method: 'POST',
         headers: {
@@ -43,6 +52,9 @@ async function postData(per_name,per_age,per_email,per_gender)
     .then(response => {
         // Handle response from server
         console.log('Response:', response.json());
+        if(response.status == 200){
+            window.location.href = "mainContent.html";
+        }
     })
     .catch(error => {
         // Handle error
