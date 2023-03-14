@@ -122,7 +122,7 @@ const print_array = () =>{
 const submit = () => { 
     abnormal_array.splice(0,abnormal_array.length);
     normal_array.splice(0,normal_array.length);
-    randomInput(100)
+   
 
     parameter.forEach(element => {
         const x = new parameter_class(element[0], element[1], element[2]);
