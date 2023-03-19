@@ -41,7 +41,7 @@ function getFuncName() {
 const randomInput=(limit)=>{
     const x = document.getElementsByClassName("FlexContainer");
     for (let i = 1; i < x.length-1; i++) {
-        x[i].getElementsByTagName("input")[0].value = Math.random() * limit;
+        x[i].getElementsByTagName("input")[0].value =  Math.floor(Math.random()*100);
     }
 }
 const validate =(x,value,link_name,low_val,high_val)=>
@@ -192,7 +192,7 @@ modal_close.addEventListener("click", () => {
 
 console.log(dataArray);
 
-const saveParam = "http://localhost:3000/saveParam"
+const saveParam = "https://server01.onrender.com/saveParam"
 
 async function postData()
 {
