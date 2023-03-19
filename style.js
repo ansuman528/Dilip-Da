@@ -41,7 +41,7 @@ function getFuncName() {
 const randomInput=(limit)=>{
     const x = document.getElementsByClassName("FlexContainer");
     for (let i = 1; i < x.length-1; i++) {
-        x[i].getElementsByTagName("input")[0].value =  Math.floor(Math.random()*100);
+        x[i].getElementsByTagName("input")[0].value =  Math.floor(Math.random()*limit);
     }
 }
 const validate =(x,value,link_name,low_val,high_val)=>
