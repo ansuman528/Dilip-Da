@@ -122,7 +122,7 @@ const print_array = () =>{
 const submit = () => { 
     abnormal_array.splice(0,abnormal_array.length);
     normal_array.splice(0,normal_array.length);
-    randomInput(100)
+   
 
     parameter.forEach(element => {
         const x = new parameter_class(element[0], element[1], element[2]);
@@ -162,7 +162,7 @@ function NewTab() {
 }
 
 
-const parameter = [["RBC",20,40],["WBC",4000,11000],["Heaomoglobin",12,15],["HCT",36,45],["MCV",83,101],["MCH",27,32],["MCHC",32,35],["RDW",12,14],["Platelet",2,4],["Neutrophil",40,80],["Eosinophil",1,6],["Basophil",1,2],["Lymphocyte",20,40],["Monocyte",2,10],["Plateletcrit",0.22,0.24],["RDW_CV",11.5,15.4],];
+const parameter = [["RBC",38,59],["WBC",4000,11000],["Heaomoglobin",12,15],["HCT",36,45],["MCV",83,101],["MCH",27,32],["MCHC",32,35],["RDW",12,14],["Platelet",2,4],["Neutrophil",40,80],["Eosinophil",1,6],["Basophil",1,2],["Lymphocyte",20,40],["Monocyte",2,10],["Plateletcrit",0.22,0.24],["RDW_CV",11.5,15.4],];
 const submit_btn = document.getElementById("submitbtn");
 const reset_btn = document.getElementById("resetbtn");
 const report_generation = document.getElementById("gen_report");
