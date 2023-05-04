@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="report.css">
 </head>
+<script>
+  document.getElementsByClassName('loader')[0].style.display="block"
+</script>
 <body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
     <section style="text-align: center;">
         <h1>Report</h1>
     </section>
@@ -15,9 +21,9 @@
         <div>
           <h3>Patient Information</h3>
           <div>
-            Name : <span id="name">John Doe</span><br>
-            Gender : <span id="gender">Male</span><br>
-            Age : <span id="age">20</span>
+            Name : <span id="name"></span><br>
+            Gender : <span id="gender"></span><br>
+            Age : <span id="age"></span>
           </div>
         </div>
         <div class="time_date_val">
@@ -33,25 +39,17 @@
         </div>
     </section>
     <section>
-      <div class="main_sec">
-        <div>
-          <h3>Possible Diseases</h3>
-          <div>
-            <ul id="diseases">
-            </ul>
-          </div>
-        </div>
-        <div>
-          <h3>Diagnostic Techniques</h3>
-          <div>
-            <ul id="dia_tech">
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div>
-      </div>
-        
+      <table id="health-parameters">
+        <thead>
+          <tr>
+            <th>Health Parameter</th>
+            <th>Diseases</th>
+            <th>Tests</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </section>
 </body>
 <script>
@@ -78,15 +76,25 @@
             let gender = document.getElementById('gender')
             let age = document.getElementById('age')
             console.log(data);
-            name.innerHTML=data[3]
-            gender.innerHTML=data[1]
-            age.innerHTML=data[2]
-            let list = document.getElementById('diseases')
-            for(let i=0;i<data[0].length;i++){
-                let li = document.createElement('li')
-                li.innerHTML=data[0][i]
-                list.appendChild(li)
-            }
+            name.innerHTML= data[0].name
+            gender.innerHTML=data[0].gender
+            age.innerHTML=data[0].age
+            
+          document.getElementsByClassName('loader')[0].style.display="none";
+          const tableBody = document.querySelector("#health-parameters tbody");
+          for (const [healthParameter, [diseases, tests]] of Object.entries(data[1])) {
+            const row = document.createElement("tr");
+            const healthParamCell = document.createElement("td");
+            healthParamCell.textContent = healthParameter;
+            const diseasesCell = document.createElement("td");
+            diseasesCell.textContent = diseases.join(", ");
+            const testsCell = document.createElement("td");
+            testsCell.textContent = tests.join("; ");
+            row.appendChild(healthParamCell);
+            row.appendChild(diseasesCell);
+            row.appendChild(testsCell);
+            tableBody.appendChild(row);
+          }
 
 
         })
