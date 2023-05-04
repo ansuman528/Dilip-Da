@@ -8,6 +8,19 @@ section{
     border: 1px solid black;
     padding: 15px;
 }
-section h3{
-    margin-left: 2em;
+.main_sec{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+.main_sec_info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.time_date_val{
+  display: flex;
+  flex-direction: column;
 }

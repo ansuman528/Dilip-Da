@@ -11,12 +11,21 @@
         <h1>Report</h1>
     </section>
     <section>
-        <h3>Patient Information</h3>
+      <div class="main_sec_info">
         <div>
+          <h3>Patient Information</h3>
+          <div>
             Name : <span id="name">John Doe</span><br>
             Gender : <span id="gender">Male</span><br>
             Age : <span id="age">20</span>
+          </div>
         </div>
+        <div class="time_date_val">
+          <span>Date:<span id="date_val"></span></span><br>
+          <time>Time:<span id="time_val"></span></time>
+        </div>
+      </div>
+        
     </section>
     <section>
         <h3>Abnormal Parameters</h3>
@@ -24,12 +33,25 @@
         </div>
     </section>
     <section>
-        <h3>possible Diseases</h3>
+      <div class="main_sec">
         <div>
+          <h3>Possible Diseases</h3>
+          <div>
             <ul id="diseases">
-                
             </ul>
+          </div>
         </div>
+        <div>
+          <h3>Diagnostic Techniques</h3>
+          <div>
+            <ul id="dia_tech">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+        
     </section>
 </body>
 <script>
@@ -48,6 +70,7 @@
             list.appendChild(comma)
         }
         let url = "https://server01.onrender.com/generateReport"
+        // let url = "http://localhost:3000/generateReport"
         fetch(url)
         .then((res) => res.json())
         .then((data) => {
@@ -68,8 +91,17 @@
 
         })
     }
+    const getTimeandDate = () => {
+      console.log("hello");
+        const date = new Date();
+        const time = date.toLocaleTimeString();
+        const date_val = date.toLocaleDateString();
+        document.getElementById("date_val").innerHTML = date_val;
+        document.getElementById("time_val").innerHTML = time;
+    };
     getData();
     printPage();
+    getTimeandDate();
 
 </script>
 </html>
