@@ -54,7 +54,7 @@
 </body>
 <script>
     function printPage() {
-        setTimeout(function(){window.print();}, 1000);
+        setTimeout(function(){window.print();}, 5000);
     }
     function getData(){
         var stored = JSON.parse(localStorage.getItem("abnormal"));
@@ -108,8 +108,9 @@
         document.getElementById("time_val").innerHTML = time;
     };
     getData();
-    printPage();
     getTimeandDate();
+    printPage();
+    
 
 </script>
 </html>
