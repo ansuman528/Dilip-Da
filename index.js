@@ -26,6 +26,7 @@ const btn = document.querySelector("a");
 btn.addEventListener("click", validation)
 
 const saveUser = "https://server01.onrender.com/saveUser"
+// const saveUser = "http://localhost:3000/saveUser"
 // const saveParam = "http://localhost:3000/saveParam"
 
 const sessionIdGnerator = async () => {
@@ -39,6 +40,7 @@ const sessionIdGnerator = async () => {
 
 async function postData(per_name,per_age,per_email,per_gender)
 {
+    document.getElementsByClassName("loader")[0].style.display = "block";
     // let person = {"name":per_name, "age":per_age, "email":per_email,"gender":per_gender};
     person = {name: per_name,age:per_age,email:per_email,gender:per_gender,sessionId:await sessionIdGnerator()}
     console.log(person);
@@ -53,6 +55,7 @@ async function postData(per_name,per_age,per_email,per_gender)
         // Handle response from server
         console.log('Response:', response.json());
         if(response.status == 200){
+            document.getElementsByClassName("loader")[0].style.display = "none";
             window.location.href = "mainContent.html";
         }
     })
