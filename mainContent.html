@@ -166,9 +166,10 @@
         <!-- submit button -->
         <section class='FlexContainer'>
             <div class="submitbtn">
-                <button id="submitbtn">submit</button>
-                <button id="resetbtn">reset</button>
-                <a id="moreResult" href="#demo-modal">More..</a>
+                <button id="submitbtn">Submit</button>
+                <button id="resetbtn">Reset</button>
+                <button id="moreResult" onclick="more();" href="#demo-modal">More</button>
+                
                 <button id="gen_report">Generate Report</button>
             </div>
         </section>
@@ -202,4 +203,9 @@
     
 </body>
 <script src="./style.js"></script>
+<script>
+                    function more(){
+                        window.location.href = "#demo-modal";
+                    }
+                </script>
 </html>

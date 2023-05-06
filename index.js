@@ -25,8 +25,8 @@ const validation = async () =>{
 const btn = document.querySelector("a");
 btn.addEventListener("click", validation)
 
-const saveUser = "https://server01.onrender.com/saveUser"
-// const saveUser = "http://localhost:3000/saveUser"
+// const saveUser = "https://server01.onrender.com/saveUser"
+const saveUser = "http://localhost:3000/saveUser"
 // const saveParam = "http://localhost:3000/saveParam"
 
 const sessionIdGnerator = async () => {

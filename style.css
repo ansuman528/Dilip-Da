@@ -72,23 +72,6 @@ body
     font-weight: 400;
     font-size: larger;
 }
-.FlexContainer .submitbtn{
-    text-align: center;
-}
-.FlexContainer button{
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    outline: none;
-    color: black;
-    font-weight: 400;
-    font-size: larger;
-    border-top: 1px solid rgba(255,255, 255, 0.5);
-    border-left: 1px solid rgba(255,255, 255, 0.5);
-    border-radius:15px;
-    background:rgba(255,255, 255, 0.1);
-    box-shadow:20px 20px 50px rgba(0, 0, 0, 0.5);
-}
 .FlexContainer button:hover
 {
     box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -187,4 +170,29 @@ body
   right: 10px;
   color: #585858;
   text-decoration: none;
+}
+.FlexContainer .submitbtn{
+
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.FlexContainer .submitbtn button{
+    border: 1px solid #ccc;
+    padding: 6px;
+    margin-left: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    color: black;
+    font-weight: 300;
+    font-size: larger;
+    border-top: 1px solid rgba(255,255, 255, 0.5);
+    border-left: 1px solid rgba(255,255, 255, 0.5);
+    border-radius:15px;
+    background:rgba(255,255, 255, 0.1);
+    box-shadow:20px 20px 50px rgba(0, 0, 0, 0.5);
 }
