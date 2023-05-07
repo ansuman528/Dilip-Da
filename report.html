@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="report.css">
 </head>
-<script>
-  document.getElementsByClassName('loader')[0].style.display="block"
-</script>
 <body>
   <div class="loader">
     <div class="spinner"></div>
@@ -80,20 +77,31 @@
             gender.innerHTML=data[0].gender
             age.innerHTML=data[0].age
             
-          document.getElementsByClassName('loader')[0].style.display="none";
           const tableBody = document.querySelector("#health-parameters tbody");
           for (const [healthParameter, [diseases, tests]] of Object.entries(data[1])) {
-            const row = document.createElement("tr");
-            const healthParamCell = document.createElement("td");
-            healthParamCell.textContent = healthParameter;
-            const diseasesCell = document.createElement("td");
-            diseasesCell.textContent = diseases.join(", ");
-            const testsCell = document.createElement("td");
-            testsCell.textContent = tests.join("; ");
-            row.appendChild(healthParamCell);
-            row.appendChild(diseasesCell);
-            row.appendChild(testsCell);
-            tableBody.appendChild(row);
+                console.log(healthParameter.length);
+                console.log(healthParameter, diseases, tests);
+                if(diseases == undefined && tests == undefined){
+                    continue;
+                }
+                else{
+                    const row = document.createElement("tr");
+                    const healthParamCell = document.createElement("td");
+                    healthParamCell.textContent = healthParameter;
+                    row.appendChild(healthParamCell);
+                    if(diseases != undefined){
+                        const diseasesCell = document.createElement("td");
+                        diseasesCell.textContent = diseases.join(", ");
+                        row.appendChild(diseasesCell);
+                    }
+                    if(tests != undefined){
+                        const testsCell = document.createElement("td");
+                        testsCell.textContent = tests.join(", ");
+                        row.appendChild(testsCell);
+                    }
+                    tableBody.appendChild(row);
+                }
+                
           }
 
 
